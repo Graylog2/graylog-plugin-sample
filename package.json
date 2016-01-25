@@ -15,12 +15,14 @@
   ],
   "author": "Graylog, Inc. <hello@graylog.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "reflux": "^0.2.12"
+  },
   "devDependencies": {
     "babel-core": "^5.x.x",
     "babel-loader": "^5.x.x",
     "graylog-web-manifests": "^2.0.0-SNAPSHOT-1",
-    "graylog-web-plugin": "~0.0.9",
+    "graylog-web-plugin": "~0.0.17",
     "json-loader": "^0.5.4",
     "react": "^0.14.6",
     "react-bootstrap": "^0.28.2",
