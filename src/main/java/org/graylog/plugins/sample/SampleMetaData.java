@@ -1,4 +1,4 @@
-package org.graylog.plugins;
+package org.graylog.plugins.sample;
 
 import org.graylog2.plugin.PluginMetaData;
 import org.graylog2.plugin.ServerStatus;
@@ -12,9 +12,11 @@ import java.util.Set;
  * Implement the PluginMetaData interface here.
  */
 public class SampleMetaData implements PluginMetaData {
+    private static final String PLUGIN_PROPERTIES = "org.graylog.plugins.graylog-plugin-sample/graylog-plugin.properties";
+
     @Override
     public String getUniqueId() {
-        return "org.graylog.plugins.SamplePlugin";
+        return "org.graylog.plugins.sample.SamplePlugin";
     }
 
     @Override
@@ -24,19 +26,17 @@ public class SampleMetaData implements PluginMetaData {
 
     @Override
     public String getAuthor() {
-        // TODO Insert author name
-        return "Sample author";
+        return "Graylog, Inc <hello@graylog.com>";
     }
 
     @Override
     public URI getURL() {
-        // TODO Insert correct plugin website
-        return URI.create("https://www.graylog.org/");
+        return URI.create("https://github.com/Graylog2/graylog-plugin-sample");
     }
 
     @Override
     public Version getVersion() {
-        return new Version(1, 0, 0);
+        return Version.fromPluginProperties(getClass(), PLUGIN_PROPERTIES, "version", Version.from(0, 0, 0, "unknown"));
     }
 
     @Override
@@ -47,7 +47,7 @@ public class SampleMetaData implements PluginMetaData {
 
     @Override
     public Version getRequiredVersion() {
-        return new Version(1, 2, 0);
+        return Version.fromPluginProperties(getClass(), PLUGIN_PROPERTIES, "graylog.version", Version.from(0, 0, 0, "unknown"));
     }
 
     @Override

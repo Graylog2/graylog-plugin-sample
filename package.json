@@ -1,6 +1,6 @@
 {
   "name": "Sample",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "2.2.0",
   "description": "",
   "repository": {
     "type": "git",
@@ -14,21 +14,10 @@
     "graylog"
   ],
   "author": "Graylog, Inc. <hello@graylog.com>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "dependencies": {
-    "reflux": "^0.2.12"
   },
   "devDependencies": {
-    "babel-core": "^5.x.x",
-    "babel-loader": "^5.x.x",
-    "graylog-web-manifests": "^2.0.0-SNAPSHOT-1",
-    "graylog-web-plugin": "~0.0.17",
-    "json-loader": "^0.5.4",
-    "react": "^0.14.6",
-    "react-bootstrap": "^0.28.2",
-    "react-dom": "^0.14.6",
-    "react-hot-loader": "^1.3.0",
-    "react-proxy-loader": "^0.3.4",
-    "webpack": "^1.12.2"
+    "graylog-web-plugin": "file:../graylog2-server/graylog2-web-interface/packages/graylog-web-plugin"
   }
 }
