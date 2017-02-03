@@ -1,6 +1,7 @@
 package org.graylog.plugins.sample;
 
 import org.graylog.plugins.sample.alerts.SampleAlertCondition;
+import org.graylog.plugins.sample.alerts.SampleAlertNotification;
 import org.graylog2.plugin.PluginConfigBean;
 import org.graylog2.plugin.PluginModule;
 
@@ -41,6 +42,8 @@ public class SampleModule extends PluginModule {
          *
          * addConfigBeans();
          */
+
+        addAlarmCallback(SampleAlertNotification.class);
 
         addAlertCondition(SampleAlertCondition.class.getCanonicalName(),
                 SampleAlertCondition.class,
