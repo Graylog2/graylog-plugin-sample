@@ -2,6 +2,7 @@ package org.graylog.plugins.sample;
 
 import org.graylog.plugins.sample.alerts.SampleAlertCondition;
 import org.graylog.plugins.sample.alerts.SampleAlertNotification;
+import org.graylog.plugins.sample.decorator.SampleDecorator;
 import org.graylog2.plugin.PluginConfigBean;
 import org.graylog2.plugin.PluginModule;
 
@@ -48,5 +49,9 @@ public class SampleModule extends PluginModule {
         addAlertCondition(SampleAlertCondition.class.getCanonicalName(),
                 SampleAlertCondition.class,
                 SampleAlertCondition.Factory.class);
+
+        installSearchResponseDecorator(searchResponseDecoratorBinder(),
+                SampleDecorator.class,
+                SampleDecorator.Factory.class);
     }
 }
