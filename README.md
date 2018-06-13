@@ -3,7 +3,7 @@
 This repository is intended to be used to follow the [Plugin API documentation](https://docs.graylog.com/pages/plugins.html) for Graylog.
 It contains no useful functionality beyond illustrating the various extension points one can use for customizing and extending Graylog. 
 
-[![Build Status](https://travis-ci.org/Graylog2/graylog-plugin-sample.svg?branch=master)](https://travis-ci.org/Graylog2/graylog-plugin-sample)
+[![Build Status](https://travis-ci.org/Graylog2/graylog-plugin-sample.svg?branch=2.2)](https://travis-ci.org/Graylog2/graylog-plugin-sample)
 
 __Use this paragraph to enter a description of your plugin.__
 
