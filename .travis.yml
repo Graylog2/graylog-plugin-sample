@@ -5,24 +5,30 @@ jdk:
 addons:
   apt:
     packages:
+      - libxml2-utils
       - rpm
 before_install:
-  - git clone --depth 1 --branch 2.3.0 https://github.com/Graylog2/graylog2-server.git ../graylog2-server
-before_deploy:
-  - mvn jdeb:jdeb && export RELEASE_DEB_FILE=$(ls target/*.deb)
-  - mvn rpm:rpm && export RELEASE_RPM_FILE=$(find target/ -name '*.rpm' | tail -1)
-  - rm -f target/original-*.jar
-  - export RELEASE_PKG_FILE=$(ls target/*.jar)
-  - echo "Deploying release to GitHub releases"
-deploy:
-  provider: releases
-  api_key:
-    secure: <enter your encrypted GitHub access token>
-  file:
-    - "${RELEASE_PKG_FILE}"
-    - "${RELEASE_DEB_FILE}"
-    - "${RELEASE_RPM_FILE}"
-  skip_cleanup: true
-  on:
-    tags: true
-    jdk: oraclejdk8
+  # Get Graylog version from Maven POM (property: "graylog.version")
+  - export GRAYLOG_VERSION=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="properties"]/*[local-name()="graylog.version"]/text()' pom.xml)
+  # Checkout desired Graylog version
+  - git clone --depth 1 --branch "${GRAYLOG_VERSION}" https://github.com/Graylog2/graylog2-server.git ../graylog2-server
+
+# For automatic deployment, uncomment the lines below.
+# See https://docs.travis-ci.com/user/deployment/releases/ for details.
+#before_deploy:
+#  - find . -type f -name 'original-*.jar' -delete
+#  - mvn jdeb:jdeb
+#  - mvn rpm:rpm
+#deploy:
+#  provider: releases
+#  api_key:
+#    secure: <enter your encrypted GitHub access token>
+#  file_glob: true
+#  file:
+#    - "**/target/*.jar"
+#    - "**/target/*.deb"
+#    - "**/target/**/*.rpm"
+#  skip_cleanup: true
+#  on:
+#    tags: true
+#    jdk: oraclejdk8
