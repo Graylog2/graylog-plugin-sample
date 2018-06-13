@@ -15,7 +15,7 @@ before_install:
   - git clone --depth 1 --branch "${GRAYLOG_VERSION}" https://github.com/Graylog2/graylog2-server.git ../graylog2-server
   # Build Graylog web interface
   - pushd ../graylog2-server
-  - mvn package -pl graylog2-server -B -V -Dmaven.compile.skip=true -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dmaven.source.skip=true
+  - mvn package -pl graylog2-server -B -V -Dmaven.main.skip=true -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dmaven.source.skip=true
   - popd
 
 # For automatic deployment, uncomment the lines below.
