@@ -1,14 +1,13 @@
 {
   "name": "Sample",
   "version": "2.2.0",
-  "description": "",
+  "description": "Graylog Example plugin",
   "repository": {
     "type": "git",
     "url": "https://github.com/Graylog2/graylog-plugin-sample"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/webpack"
+    "build": "webpack --bail"
   },
   "keywords": [
     "graylog"
