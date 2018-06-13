@@ -7,9 +7,16 @@
         <maven>3.1</maven>
     </prerequisites>
 
+    <parent>
+        <groupId>org.graylog.plugins</groupId>
+        <artifactId>graylog-plugin-web-parent</artifactId>
+        <version>2.3.0</version>
+        <relativePath>../graylog2-server/graylog-plugin-parent/graylog-plugin-web-parent</relativePath>
+    </parent>
+
     <groupId>org.graylog.plugins</groupId>
     <artifactId>graylog-plugin-sample</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.3.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
@@ -35,11 +42,14 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <!-- Plugins will not be deployed by default - set to `false` if you actually want to deploy it -->
+        <!-- Skip unnecessary build steps -->
+        <maven.source.skip>true</maven.source.skip>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.install.skip>true</maven.install.skip>
         <maven.deploy.skip>true</maven.deploy.skip>
+        <maven.site.skip>true</maven.site.skip>
 
         <graylog.version>2.3.0</graylog.version>
-        <graylog.plugin-dir>/usr/share/graylog-server/plugin</graylog.plugin-dir>
     </properties>
 
     <distributionManagement>
@@ -86,6 +96,12 @@
             <groupId>org.graylog2</groupId>
             <artifactId>graylog2-server</artifactId>
             <version>${graylog.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.auto.value</groupId>
+            <artifactId>auto-value</artifactId>
+            <version>${auto-value.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
