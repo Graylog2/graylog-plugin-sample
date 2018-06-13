@@ -7,7 +7,7 @@ It contains no useful functionality beyond illustrating the various extension po
 
 __Use this paragraph to enter a description of your plugin.__
 
-**Required Graylog version:** 2.3 and later
+**Required Graylog version:** 3.0 and later
 
 Installation
 ------------
