@@ -1,6 +1,6 @@
 # Sample Plugin for Graylog
 
-This repository is intended to be used to follow the [Plugin API documentation](https://docs.graylog.com/pages/plugins.html) for Graylog.
+This repository is intended to be used to follow the [Plugin API documentation](https://docs.graylog.org/en/latest/pages/plugins.html) for Graylog.
 It contains no useful functionality beyond illustrating the various extension points one can use for customizing and extending Graylog. 
 
 [![Build Status](https://travis-ci.org/Graylog2/graylog-plugin-sample.svg?branch=master)](https://travis-ci.org/Graylog2/graylog-plugin-sample)
@@ -12,7 +12,7 @@ __Use this paragraph to enter a description of your plugin.__
 Installation
 ------------
 
-[Download the plugin](https://github.com/https://github.com/Graylog2/graylog-plugin-sample/releases)
+[Download the plugin](https://github.com/Graylog2/graylog-plugin-sample/releases)
 and place the `.jar` file in your Graylog plugin directory. The plugin directory
 is the `plugins/` folder relative from your `graylog-server` directory by default
 and can be configured in your `graylog.conf` file.
