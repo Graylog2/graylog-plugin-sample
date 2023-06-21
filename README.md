@@ -1,17 +1,17 @@
 # Sample Plugin for Graylog
 
-This repository is intended to be used to follow the [Plugin API documentation](https://docs.graylog.org/en/latest/pages/plugins.html) for Graylog.
+This repository is intended to be used to follow the [Plugin API documentation](https://go2docs.graylog.org/5-1/what_more_can_graylog_do_for_me/plugins.html) for Graylog.
 It contains no useful functionality beyond illustrating the various extension points one can use for customizing and extending Graylog. 
 
 __Important: Do not use this repository as a boilerplate for a new graylog plugin.\
-Please use the maven archetype to create a plugin skeleton, as [described in the Plugin API documentation](https://docs.graylog.org/en/latest/pages/plugins.html#creating-a-plugin-skeleton).__
+Please use the maven archetype to create a plugin skeleton, as [described in the Plugin API documentation](https://go2docs.graylog.org/5-1/what_more_can_graylog_do_for_me/plugins.html#WritingPlugins).__
 
 
 [![Build Status](https://travis-ci.org/Graylog2/graylog-plugin-sample.svg?branch=master)](https://travis-ci.org/Graylog2/graylog-plugin-sample)
 
 __Use this paragraph to enter a description of your plugin.__
 
-**Required Graylog version:** 2.3 and later
+**Required Graylog version:** 5.1 and later
 
 Installation
 ------------
