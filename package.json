@@ -1,6 +1,6 @@
 {
   "name": "Sample",
-  "version": "2.4.0",
+  "version": "5.2.0",
   "description": "Graylog Example plugin",
   "repository": {
     "type": "git",
