@@ -49,7 +49,7 @@
         <maven.deploy.skip>true</maven.deploy.skip>
         <maven.site.skip>true</maven.site.skip>
 
-        <graylog.version>5.2.0</graylog.version>
+        <graylog.version>5.2.4</graylog.version>
     </properties>
 
     <distributionManagement>
